@@ -1,0 +1,107 @@
+.dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+.pie-legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.legend-label {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.legend-value {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.time-heatmap {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.time-slot {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.time-slot:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.time-hour {
+  font-size: 10px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.time-count {
+  font-size: 8px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .time-heatmap {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .pie-legend {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .time-heatmap {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
